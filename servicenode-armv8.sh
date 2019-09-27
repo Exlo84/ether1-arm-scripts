@@ -17,7 +17,7 @@ sudo systemctl stop ether1node
 
 sudo rm geth
 
-wget https://www.dropbox.com/s/9cgnb91q45xb7of/etho_1.3.3_geth-armv8.zip
+wget https://github.com/Exlo84/ether1-arm-scripts/releases/download/0.0.1/etho_1.3.3_geth-armv8.zip
 
 unzip etho_1.3.3_geth-armv8.zip
 
@@ -61,7 +61,7 @@ echo 'Servicenode Setup Complete....Deploying IPFS'
 echo '**************************'
 
 cd /home/$_user
-wget wget https://www.dropbox.com/s/h5wuzaebzx06fz1/ipfs_v0.4.22_armv8.zip
+wget wget https://github.com/Exlo84/ether1-arm-scripts/releases/download/0.0.1/ipfs_v0.4.22_armv8.zip
 
 unzip ipfs_v0.4.22_armv8.zip
 
