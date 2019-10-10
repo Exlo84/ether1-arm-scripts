@@ -1,1 +1,1 @@
-Install guides and setup scripts for Armv6/7/8
+Install guides and setup scripts for ARMv6/7/8
