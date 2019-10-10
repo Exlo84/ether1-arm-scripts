@@ -46,7 +46,7 @@ _For SSH access without monitor on first boot, include a file called "ssh" in ro
 	systemctl restart fail2ban
 	fail2ban-client status
 
-After running the above commands & creating the ether1node user, disconnect from the server by closing down the Putty window or by type exit into the same window. Then reconnect to the server using the same IP address as before, but using the ‘ether1node’ user which you just set up.
+After running the above commands & creating the ether1node user, disconnect from the server by closing down the Putty window or by type `exit` into the same window. Then reconnect to the server using the same IP address as before, but using the ‘ether1node’ user which you just set up.
 
 **It is very important to ensure that you are connected as ether1node and not as the root user.**
 
