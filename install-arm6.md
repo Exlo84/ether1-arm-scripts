@@ -84,7 +84,7 @@ Now the node script is running on the Server! In order to double check that the 
 
 6. The ETHO wallet address must be the same address which holds the collateral for the node. For a Master Node, this is 15,000 coins, whereas a Service Node only requires 5,000 coins. The balance of the address can exceed the collateral requirement, but you must maintain the minimum balance in order to be eligible for payouts.
 
-7. After submitting this information, you will need to send a small verification transaction of 0.01 ETHO, this is to verify the balance of the wallet address and to confirm that you have ownership over the address by making a transaction from it. (At this point the 0.01 ETH0 is not recoverable.)
+7. After submitting this information, you will need to send a small verification transaction of 0.01 ETHO, this is to verify the balance of the wallet address and to confirm that you have ownership over the address by making a transaction from it. (At this point the 0.01 ETHO is not recoverable.)
 
 8. The node should now be present in the dashboard but the node is not verified. This means the node is not eligible for payouts. To verify the node click on the details button at the end of the table.
 
