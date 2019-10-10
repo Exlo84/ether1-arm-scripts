@@ -1,5 +1,13 @@
 **Raspberry Pi setup guide**
 
+Running Ether-1 nodes must adhere to the following hardware and networking **requirements**:
+	
+1. Have a **static** public IPv4 address
+2. Masternodes require **2GB** of **RAM** and Service Nodes **1GB** of **RAM**
+3. Must allow firewall access through TCP & UDP port **30305**. (For node traffic)
+4. **40GB** of available storage for a Masternode and **20GB** of available storage
+5. The collateral required to host a masternode is **15 thousand ETHO** and a service node only requires **5 thousand ETHO**.
+
 Download *Raspbian Buster Lite* [Link](https://www.raspberrypi.org/downloads/raspbian/)
 
 Direct links:
