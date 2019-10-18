@@ -19,32 +19,32 @@ _For SSH access without monitor on first boot, include a file called "ssh" in ro
 
 ***With a monitor attached, or with SSH, log with:***
 
-	User: pi
-	Password: raspberry
+	1. User: pi
+	2. Password: raspberry
 
 ***Set root password***
 
-	sudo -i
-	passwd
+	1. sudo -i
+	2. passwd
 	
 
 ***Update and add user***
 
-	apt-get update
-	apt-get dist-upgrade -y
-	mkdir /var/run/fail2ban
- 	apt-get install sudo ufw fail2ban nano -y
+	1. apt-get update
+	2. apt-get dist-upgrade -y
+	3. mkdir /var/run/fail2ban
+ 	4. apt-get install sudo ufw fail2ban nano -y
   
-	adduser ether1node
-	adduser ether1node sudo
-	adduser ether1node systemd-journal
+	5. adduser ether1node
+	6. adduser ether1node sudo
+	7. adduser ether1node systemd-journal
 
 ***One last task to be executed as root is configuring fail2ban***
 
-	cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
-	cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-	systemctl restart fail2ban
-	fail2ban-client status
+	1. cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
+	2. cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+	3. systemctl restart fail2ban
+	4. fail2ban-client status
 
 After running the above commands & creating the ether1node user, disconnect from the server by closing down the Putty window or by type `exit` into the same window. Then reconnect to the server using the same IP address as before, but using the ‘ether1node’ user which you just set up.
 
@@ -54,17 +54,17 @@ After running the above commands & creating the ether1node user, disconnect from
 
 ***Install***
 
-	mkdir -p /tmp/ether1 && cd /tmp/ether1
-	rm -rf servicenode.sh && wget https://raw.githubusercontent.com/Ether1Project/ether1-node-scripts/master/rpi/install-arm64.sh
-	chmod +x install-arm64.sh
-	./install-arm64.sh
+	1. mkdir -p /tmp/ether1 && cd /tmp/ether1
+	2. rm -rf servicenode.sh && wget https://raw.githubusercontent.com/Ether1Project/ether1-node-scripts/master/rpi/install-arm64.sh
+	3. chmod +x install-arm64.sh
+	4. ./install-arm64.sh
 
 *You will be asked to input the password for ether1node before the third command runs*
 
 Now the node script is running on the Server! In order to double check that the node is running you can use one of these commands
 
-	sudo systemctl status ether1node
-	sudo journalctl -f -u ether1node
+	1. sudo systemctl status ether1node
+	2. sudo journalctl -f -u ether1node
  
 **Congratulations your node setup is complete.**
 
