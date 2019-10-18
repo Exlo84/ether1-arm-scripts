@@ -33,7 +33,7 @@ _For SSH access without monitor on first boot, include a file called "ssh" in ro
 	1. apt-get update
 	2. apt-get dist-upgrade -y
 	3. mkdir /var/run/fail2ban
- 	4. apt-get install sudo ufw fail2ban nano -y
+ 	4. apt-get install sudo fail2ban nano -y
   
 	5. adduser ether1node
 	6. adduser ether1node sudo
