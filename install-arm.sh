@@ -38,7 +38,7 @@ User=$_user
 Group=$_user
 Type=simple
 Restart=always
-ExecStart=/usr/sbin/geth --syncmode=fast --cache=512
+ExecStart=/usr/sbin/geth --syncmode=fast --cache=128
 [Install]
 WantedBy=default.target
 EOL
