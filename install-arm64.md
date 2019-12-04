@@ -8,24 +8,8 @@ Running Ether-1 nodes must adhere to the following hardware and networking **req
 4. **40GB** of available storage for a Masternode and **20GB** of available storage
 5. The collateral required to host a masternode is **15 thousand ETHO** and a service node only requires **5 thousand ETHO**.
 
-Download *Raspbian Buster Lite* [Link](https://www.raspberrypi.org/downloads/raspbian/)
 
-Direct links:
-[Torrent](https://downloads.raspberrypi.org/raspbian_lite_latest.torrent) - [Https](https://downloads.raspberrypi.org/raspbian_lite_latest)
-
-Unzip the downloaded file, and burn the .img with f.ex _Win32 Disk Imager_ [Link](https://sourceforge.net/projects/win32diskimager/)
-
-_For SSH access without monitor on first boot, include a file called "ssh" in root of the 'boot' partition on the sd-card. The file should contain ONLY `ECHO is on.` and have NO extention._
-
-***With a monitor attached, or with SSH, log with:***
-
-	1. User: pi
-	2. Password: raspberry
-
-***Set root password***
-
-	1. sudo -i
-	2. passwd
+***With a monitor attached, or with SSH, log in to "root":***
 	
 
 ***Update and add user***
