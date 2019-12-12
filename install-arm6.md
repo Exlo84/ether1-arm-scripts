@@ -97,3 +97,7 @@ Now the node script is running on the Server! In order to double check that the 
 12. After pasting this link into the node page, click the Add button. This will take a few seconds to verify and then you will be returned to the node dashboard.
 
 ***An uptime of 95% is required for Service Nodes and Masternodes***
+
+
+Tip to extend your SDcard's lifetime. Install [log2ram](https://github.com/azlux/log2ram#install) from azlux.
+And on Raspberry Pi 4, you can disable *SWAP*
