@@ -55,7 +55,7 @@ After running the above commands & creating the ether1node user, disconnect from
 ***Install***
 
 	mkdir -p /tmp/ether1 && cd /tmp/ether1
-	rm -rf servicenode.sh && wget https://raw.githubusercontent.com/Ether1Project/ether1-node-scripts/master/rpi/install-arm6.sh
+	rm -rf install-arm6.sh && wget https://raw.githubusercontent.com/Ether1Project/ether1-node-scripts/master/rpi/install-arm6.sh
 	chmod +x install-arm6.sh
 	./install-arm6.sh
 
