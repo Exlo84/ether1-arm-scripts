@@ -1,40 +1,31 @@
 **ARMv8/ARM64 setup guide**
 
+Get [Armbian](https://www.armbian.com/download/) for your ARMv8 SoC or [Ubuntu Server](http://cdimage.ubuntu.com/releases/19.10.1/release/ubuntu-19.10.1-preinstalled-server-arm64+raspi3.img.xz) for for [Raspberry Pi 4](https://ubuntu.com/download/raspberry-pi)
+
+**Armbian**Log in as: *root*  Password: *1234*
+**Ubuntu** Log in as: *ubuntu*  Password: *ubuntu*
+
 Running Ether-1 nodes must adhere to the following hardware and networking **requirements**:
 	
 1. Have a **static** public IPv4 address
 2. Masternodes require **2GB** of **RAM** and Service Nodes **1GB** of **RAM**
 3. Must allow firewall access through TCP & UDP port **30305**. (For node traffic)
-4. **40GB** of available storage for a Masternode and **20GB** of available storage
-5. The collateral required to host a masternode is **15 thousand ETHO** and a service node only requires **5 thousand ETHO**.
+4. **40GB** of available storage for a Masternode and **20GB** of available storage for a Service Node
+5. The collateral required to host a masternode is **15 thousand ETHO** and a service node only requires **5 thousand ETHO**.	
 
-
-***With a monitor attached, or with SSH, log in to "root":***
-	
-
-***Update and add user***
+***Update and install***
 
 	1. apt-get update
 	2. apt-get dist-upgrade -y
 	3. mkdir /var/run/fail2ban
  	4. apt-get install sudo fail2ban nano -y
-  
-	5. adduser ether1node
-	6. adduser ether1node sudo
-	7. adduser ether1node systemd-journal
 
-***One last task to be executed as root is configuring fail2ban***
+***One last task before installing is configuring fail2ban***
 
 	1. cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
 	2. cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 	3. systemctl restart fail2ban
 	4. fail2ban-client status
-
-After running the above commands & creating the ether1node user, disconnect from the server by closing down the Putty window or by type `exit` into the same window. Then reconnect to the server using the same IP address as before, but using the ‘ether1node’ user which you just set up.
-
-**It is very important to ensure that you are connected as ether1node and not as the root user.**
-
-
 
 ***Install***
 
