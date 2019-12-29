@@ -5,7 +5,7 @@ Running Ether-1 nodes must adhere to the following hardware and networking **req
 1. Have a **static** public IPv4 address
 2. Masternodes require **2GB** of **RAM** and Service Nodes **1GB** of **RAM**
 3. Must allow firewall access through TCP & UDP port **30305**. (For node traffic)
-4. **40GB** of available storage for a Masternode and **20GB** of available storage
+4. **40GB** of available storage for a Masternode and **20GB** of available storage for Service Node
 5. The collateral required to host a masternode is **15 thousand ETHO** and a service node only requires **5 thousand ETHO**.
 
 Download *Raspbian Buster Lite* [Link](https://www.raspberrypi.org/downloads/raspbian/)
@@ -28,16 +28,12 @@ _For SSH access without monitor on first boot, include a file called "ssh" in ro
 	passwd
 	
 
-***Update and add user***
+***Update and install***
 
 	apt-get update
 	apt-get dist-upgrade -y
 	mkdir /var/run/fail2ban
  	apt-get install sudo ufw fail2ban nano -y
-  
-	adduser ether1node
-	adduser ether1node sudo
-	adduser ether1node systemd-journal
 
 ***One last task to be executed as root is configuring fail2ban***
 
@@ -45,11 +41,6 @@ _For SSH access without monitor on first boot, include a file called "ssh" in ro
 	cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 	systemctl restart fail2ban
 	fail2ban-client status
-
-After running the above commands & creating the ether1node user, disconnect from the server by closing down the Putty window or by type `exit` into the same window. Then reconnect to the server using the same IP address as before, but using the ‘ether1node’ user which you just set up.
-
-**It is very important to ensure that you are connected as ether1node and not as the root user.**
-
 
 
 ***Install***
@@ -59,7 +50,7 @@ After running the above commands & creating the ether1node user, disconnect from
 	chmod +x install-arm6.sh
 	./install-arm6.sh
 
-*You will be asked to input the password for ether1node before the third command runs*
+*You will be asked to input the password for root before the third command runs*
 
 Now the node script is running on the Server! In order to double check that the node is running you can use one of these commands
 
