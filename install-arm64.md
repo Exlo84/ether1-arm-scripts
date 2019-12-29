@@ -2,7 +2,8 @@
 
 Get [Armbian](https://www.armbian.com/download/) for your ARMv8 SoC or [Ubuntu Server](http://cdimage.ubuntu.com/releases/19.10.1/release/ubuntu-19.10.1-preinstalled-server-arm64+raspi3.img.xz) for for [Raspberry Pi 4](https://ubuntu.com/download/raspberry-pi)
 
-**Armbian**Log in as: *root*  Password: *1234*
+**Armbian** Log in as: *root*  Password: *1234*
+
 **Ubuntu** Log in as: *ubuntu*  Password: *ubuntu*
 
 Running Ether-1 nodes must adhere to the following hardware and networking **requirements**:
