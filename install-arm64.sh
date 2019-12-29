@@ -15,15 +15,15 @@ sudo systemctl stop ether1node
 
 sudo rm geth
 
-wget https://github.com/Ether1Project/Ether-1-SN-MN-Binaries/releases/download/1.2.2/Ether1-MN-SN-1.2.2-arm64.zip
+wget https://github.com/Ether1Project/Ether-1-SN-MN-Binaries/releases/download/1.3.0/Ether1-MN-SN-1.3.0-arm64.zip
 
-unzip Ether1-MN-SN-1.2.2-arm64.zip
+unzip Ether1-MN-SN-1.3.0-arm64.zip
 
 # Make node executable
 chmod +x geth
 
 # Remove and cleanup
-rm Ether1-MN-SN-1.2.2-arm64.zip
+rm Ether1-MN-SN-1.3.0-arm64.zip
 
 echo '**************************'
 echo 'Creating and setting up system service'
