@@ -14,19 +14,27 @@ Running Ether-1 nodes must adhere to the following hardware and networking **req
 4. **40GB** of available storage for a Masternode and **20GB** of available storage for a Service Node
 5. The collateral required to host a masternode is **15 thousand ETHO** and a service node only requires **5 thousand ETHO**.	
 
-***Update and install***
+***Update and add user***
 
-	1. apt-get update
-	2. apt-get dist-upgrade -y
-	3. mkdir /var/run/fail2ban
- 	4. apt-get install sudo fail2ban nano -y
+	apt-get update
+	apt-get dist-upgrade -y
+	mkdir /var/run/fail2ban
+ 	apt-get install sudo ufw fail2ban nano -y
 
-***One last task before installing is configuring fail2ban***
+	adduser ether1node
+	adduser ether1node sudo
+	adduser ether1node systemd-journal
 
-	1. cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
-	2. cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-	3. systemctl restart fail2ban
-	4. fail2ban-client status
+***One last task to be executed as root is configuring fail2ban***
+
+	cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
+	cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+	systemctl restart fail2ban
+	fail2ban-client status
+
+After running the above commands & creating the ether1node user, disconnect from the server by closing down the Putty window or by type `exit` into the same window. Then reconnect to the server using the same IP address as before, but using the ‘ether1node’ user which you just set up.
+
+**It is very important to ensure that you are connected as ether1node and not as the root user.**
 
 ***Install***
 
